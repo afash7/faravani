@@ -8,7 +8,8 @@ from faravani.local_settings import *
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+SMS_BACKEND = 'ippanel.SmsBackend'
+IP_PANEL_API_KEY = ''
 
 
 ALLOWED_HOSTS = ["*"]
