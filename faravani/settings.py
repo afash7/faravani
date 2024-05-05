@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "blog.apps.BlogConfig",
     "user.apps.UserConfig",
-    "mobile_auth.MobileAuthConfig",
+    "mobile_auth.apps.MobileAuthConfig",
 ]
 
 MIDDLEWARE = [
