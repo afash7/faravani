@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="afash.ir" content="afash.ir">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat list</title>
+</head>
+<body>
+    <h2>Chat List</h2>
+    <ul>
+        {% for chat in chats %}
+        <li>
+            <a href="{% url 'chat_detail' chat.pk %}">Chat with {{ chat.participants.exclude(id=request.user.id).first.username }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

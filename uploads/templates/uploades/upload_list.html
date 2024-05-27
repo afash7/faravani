@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="afash.ir" content="afash.ir">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload_list</title>
+</head>
+<body>
+    <h2>Upload List</h2>
+    <a href="{% url 'upload_image' %}">Upload New Image</a>
+    <ul>
+        {% for upload in uploads %}
+        <li>
+            <img src="{{ upload.image.url }}" alt="Uploaded Image">
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
