@@ -1,0 +1,8 @@
+.register-form, .login-form {
+    @apply max-w-md mx-auto mt-10 p-5 bg-white shadow-md rounded-lg;
+  }
+  
+  .profile-form {
+    @apply max-w-md mx-auto mt-10 p-5 bg-white shadow-md rounded-lg;
+  }
+  
