@@ -26,6 +26,14 @@ INSTALLED_APPS = [
     "blog.apps.BlogConfig",
     "user.apps.UserConfig",
     "mobile_auth.apps.MobileAuthConfig",
+    'users',  
+    'items',  
+    'communications',  
+    'verification',  
+    'uploads',  
+    'categories',  
+    'rest_framework',  
+
 ]
 
 MIDDLEWARE = [
@@ -87,20 +95,40 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 
+LANGUAGE_CODE = 'fa-ir'
 
-LANGUAGE_CODE = "en-us"
-
-TIME_ZONE = "UTC"
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 
-STATIC_URL = "static/"
-
+TAILWIND_APP_NAME = 'theme'
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.example.com'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = 'your-email@example.com'
+# EMAIL_HOST_PASSWORD = 'your-email-password'
+
+TWILIO_ACCOUNT_SID = 'your_account_sid'
+TWILIO_AUTH_TOKEN = 'your_auth_token'
+TWILIO_PHONE_NUMBER = 'your_twilio_phone_number'
