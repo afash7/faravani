@@ -3,6 +3,28 @@ from django.contrib.auth.decorators import login_required
 from .models import Chat, Message
 from .forms import MessageForm
 
+
+@login_required
+def send_message(request):
+    if request.method == 'POST':
+        form = MessageForm(request.POST)
+        if form.is_valid():
+            message = form.save(commit=False)
+            message.sender = request.user
+            message.save()
+            return redirect('communications:inbox')
+    else:
+        form = MessageForm()
+    return render(request, 'communications/send_message.html', {'form': form})
+
+
+@login_required
+def inbox(request):
+    messages = Message.objects.filter(recipient=request.user)
+    return render(request, 'communications/inbox.html', {'messages': messages})
+
+
+
 @login_required
 def chat_list(request):
     chats = Chat.objects.filter(participants=request.user)
