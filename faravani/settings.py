@@ -26,13 +26,15 @@ INSTALLED_APPS = [
     "blog.apps.BlogConfig",
     "user.apps.UserConfig",
     "mobile_auth.apps.MobileAuthConfig",
+    'blog',
     'users',  
     'items',  
     'communications',  
     'verification',  
     'uploads',  
     'categories',  
-    'rest_framework',  
+    'rest_framework',
+    'forum',
 
 ]
 
