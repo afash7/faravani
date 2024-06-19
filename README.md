@@ -180,52 +180,100 @@
 41 directories, 102 files
 ```
 
+## اپلیکیشن‌ها
+
+### اپلیکیشن `users`:
+- `register_user`: ثبت‌نام کاربر جدید.
+- `login_user`: ورود کاربر به سیستم.
+- `send_verification_code`: ارسال کد تایید به شماره موبایل کاربر.
+- `verify_user`: تایید کد و فعال‌سازی حساب کاربری.
+
+### اپلیکیشن `items`:
+- `create_item`: ایجاد یک آگهی کالای جدید.
+- `update_item`: به‌روزرسانی اطلاعات یک آگهی کالا.
+- `delete_item`: حذف یک آگهی کالا.
+- `list_items_by_category`: لیست کردن کالاها بر اساس دسته‌بندی.
+
+### اپلیکیشن `locations`:
+- `add_city`: اضافه کردن یک شهر جدید به دیتابیس.
+- `add_province`: اضافه کردن یک استان جدید به دیتابیس.
+- `list_cities`: لیست کردن تمام شهرها.
+- `list_provinces`: لیست کردن تمام استان‌ها.
+
+### اپلیکیشن `communications`:
+- `start_chat`: شروع یک چت جدید بین دو کاربر.
+- `send_message`: ارسال پیام در یک چت.
+- `list_messages`: لیست کردن پیام‌ها در یک چت.
+
+### اپلیکیشن `verification`:
+- `generate_verification_code`: تولید کد تایید.
+- `send_verification_code`: ارسال کد تایید به کاربر.
+- `check_verification_code`: بررسی صحت کد تایید وارد شده توسط کاربر.
+
+### اپلیکیشن `api`:
+- `get_item_details`: دریافت جزئیات یک کالای آگهی‌شده.
+- `search_items`: جستجوی کالاها بر اساس فیلترهای مختلف.
+- `user_profile`: دریافت اطلاعات پروفایل کاربر.
+
+## روابط دیتابیس
+
+- `User` به `UserProfile`: رابطه‌ی `One-to-One`
+- `UserProfile` به `City`: رابطه‌ی `Many-to-One`
+- `Item` به `User`: رابطه‌ی `Many-to-One`
+- `Item` به `Category`: رابطه‌ی `Many-to-One`
+- `Category` به خودش (برای دسته‌بندی‌های سلسله‌مراتبی): رابطه‌ی `Self-referencing`
+- `City` به `Province`: رابطه‌ی `Many-to-One`
+
 ## نصب و راه‌اندازی
 
 ### پیش‌نیازها
 - Python 3.8 به بالا
 - Django 3.2 به بالا
 
+
 ### مراحل نصب
-۱. مخزن را کلون کنید:
+
+1. مخزن را کلون کنید:
    ```bash
-   git clone https://github.com/username/repo-name.git
+   git clone https://github.com/username/repo.git
+   cd repo
    ```
 
-۲. وارد دایرکتوری پروژه شوید:
-   ```bash
-   cd repo-name
-   ```
-
-۳. محیط مجازی بسازید:
+2. محیط مجازی ایجاد و فعال کنید:
    ```bash
    python -m venv venv
+   source venv/bin/activate  # برای سیستم‌های یونیکس
+   venv\Scripts\activate     # برای سیستم‌های ویندوز
    ```
 
-۴. محیط مجازی را فعال کنید:
-   - در ویندوز:
-     ```bash
-     venv\Scripts\activate
-     ```
-   - در مک و لینوکس:
-     ```bash
-     source venv/bin/activate
-     ```
-
-۵. بسته‌های مورد نیاز را نصب کنید:
+3. وابستگی‌ها را نصب کنید:
    ```bash
    pip install -r requirements.txt
    ```
 
-۶. مایگریت های پایگاه داده را اعمال کنید:
+4. مایگریت های دیتابیس را اعمال کنید:
    ```bash
    python manage.py migrate
    ```
 
-۷. سرور  را اجرا کنید:
+5. کاربر ادمین ایجاد کنید:
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+6. سرور را اجرا کنید:
    ```bash
    python manage.py runserver
    ```
 
-اکنون می‌توانید به آدرس `http://127.0.0.1:8000/` بروید و وبسایت را مشاهده کنید.
+سپس می‌توانید به آدرس `http://127.0.0.1:8000` مراجعه کنید و پروژه را مشاهده کنید.
+
+
+
+## تماس
+
+اگر سوالی دارید یا نیاز به کمک دارید، می‌توانید با ایمیل [afashseven@gmail.com](mailto:youremail@example.com) تماس بگیرید.
+
+
+
 
