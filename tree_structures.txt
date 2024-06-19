@@ -1,0 +1,145 @@
+.
+├── ad_app
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+├── api
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── __pycache__
+│   ├── serializers.py
+│   ├── templates
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── blog
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── __pycache__
+│   ├── templates
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── categories
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── __pycache__
+│   ├── tests.py
+│   └── views.py
+├── communications
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── __pycache__
+│   ├── templates
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── db.sqlite3
+├── faravani
+│   ├── asgi.py
+│   ├── __init__.py
+│   ├── local_settings.py
+│   ├── __pycache__
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── forum
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+├── items
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── __pycache__
+│   ├── templates
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── locations
+│   ├── admin.py
+│   ├── apps.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+├── manage.py
+├── package.json
+├── package-lock.json
+├── README.md
+├── requirements.txt
+├── styles
+│   ├── base.css
+│   ├── communications.css
+│   ├── items.css
+│   ├── uploads.css
+│   ├── users.css
+│   └── verification.css
+├── tailwind.config.js
+├── tree_structures.txt
+├── uploads
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── __pycache__
+│   ├── templates
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── users
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── __init__.py
+│   ├── migrations
+│   ├── models.py
+│   ├── __pycache__
+│   ├── tasks.py
+│   ├── templates
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+└── verification
+    ├── admin.py
+    ├── apps.py
+    ├── forms.py
+    ├── __init__.py
+    ├── migrations
+    ├── models.py
+    ├── __pycache__
+    ├── tasks.py
+    ├── templates
+    ├── tests.py
+    ├── urls.py
+    └── views.py
+
+41 directories, 102 files
