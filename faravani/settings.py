@@ -6,6 +6,7 @@ from pathlib import Path
 from faravani.local_settings import *
 
 
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SMS_BACKEND = 'ippanel.SmsBackend'
@@ -24,9 +25,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "blog.apps.BlogConfig",
-    "user.apps.UserConfig",
-    "mobile_auth.apps.MobileAuthConfig",
-    'blog',
     'users',  
     'items',  
     'communications',  
