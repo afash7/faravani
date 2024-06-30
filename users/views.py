@@ -45,3 +45,8 @@ def profile(request):
     else:
         form = UserProfileForm(instance=request.user.profile)
     return render(request, 'users/profile.html', {'form': form})
+
+
+def users_list(request):
+    users = User.objects.all()
+    return render(request, 'users/users_list.html', {'users': users})
