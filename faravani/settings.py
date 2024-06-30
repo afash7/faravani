@@ -1,7 +1,7 @@
 """
 Developer: afash.ir
 """
-
+import os
 from pathlib import Path
 from faravani.local_settings import *
 
@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "blog.apps.BlogConfig",
+    'main',
     'users',  
     'items',  
     'communications',  
@@ -110,8 +111,10 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static'
-
+STATIC_ROOT = BASE_DIR / 'static_files'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 TWILIO_ACCOUNT_SID = 'your_account_sid'
 TWILIO_AUTH_TOKEN = 'your_auth_token'
