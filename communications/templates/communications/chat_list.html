@@ -11,7 +11,7 @@
     <ul>
         {% for chat in chats %}
         <li>
-            <a href="{% url 'chat_detail' chat.pk %}">Chat with {{ chat.participants.exclude(id=request.user.id).first.username }}</a>
+            <a href="{% url 'chat_detail' chat.pk %}">Chat with {% with other_participant=chat.participants.exclude|first %}{{ other_participant.username }}{% endwith %}</a>
         </li>
         {% endfor %}
     </ul>
