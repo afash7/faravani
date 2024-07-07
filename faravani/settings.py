@@ -30,8 +30,7 @@ INSTALLED_APPS = [
     'items',  
     'communications',  
     'verification',  
-    'uploads',  
-    'categories',  
+    'uploads',   
     'rest_framework',
     'forum',
 
